@@ -1147,7 +1147,6 @@
 			{ word: 'opera' },
 			{ word: 'arepo' }
 		]
-		console.log(list_word.length)
 		let reset_proc = true;
 		let innerHTML = '';
 		let index = Math.floor(Math.random() * list_word.length);
@@ -1179,12 +1178,14 @@
 					if(third_word === third_word.split('').reverse().join('')) {
 						// Busco la segunda palabra. La misma debe empezar con la segunda letra de la primer palabra y debe terminar con la cuarta letra de la primer palabra
 						let letter_one = first_word.split(' ').join('').at(1);
-						let letter_two = first_word.split(' ').join('').at(3);
+						let letter_two = first_word.split(' ').join('').at(4);
+						let letter_three = third_word.split(' ').join('').at(3);
+						// console.log(letter_three, '//', third_word);
 						ok = false;
 						let countSecond = 0;
 						while(!ok && countSecond < list_word.length) {
 							second_word = list_word.at(countSecond).word;
-							if(second_word.at(0) === letter_one && second_word.at(4) === letter_two) {
+							if(second_word.at(0) === letter_one && second_word.at(4) === letter_two && second_word.at(2) === letter_three) {
 								// console.log('second word => ', second_word);
 								// let countFourth = 0;
 								// while(!ok && countFourth < list_word.length) {

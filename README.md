@@ -9,7 +9,7 @@ Crear una matriz cuyas palabras se puedan leer de derecha a izquierda y arriba h
 [x] - Mostrar 5 palabras al azar
 [X] - Mostrar la primer palabra al azar
 [X] - La tercer palabra debe de comenzar con la tercer letra de la primer palabra y la misma debe ser capicúa.
-[X] - La segunda palabra debe de comenzar con la segunda letra de la primer palabra y debe de terminar con la cuarta letra de la primer letra
+[X] - La segunda palabra debe de comenzar con la segunda letra de la primer palabra, la tercer letra de la segunda palabra debe ser igual a la segunda letra de la tercer palabra debe de terminar con la cuarta letra de la primer letra
 
 ## Pendiente
 [] - La cuarta palabra debe ser igual a la segunda palabra pero invertida
