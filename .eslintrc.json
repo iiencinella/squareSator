@@ -1,0 +1,39 @@
+{
+  "env": {
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:astro/recommended"
+  ],
+  "rules": {
+    // We don"t want to leak logging into our user"s console unless it"s an error
+    "no-console": ["error", { "allow": ["warn", "error"] }]
+  },
+  "overrides": [
+    {
+      // Define the configuration for `.astro` file.
+      "files": [
+        "*.astro"
+      ],
+      // Allows Astro components to be parsed.
+      "parser": "astro-eslint-parser",
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [
+          ".astro"
+        ]
+      },
+      "rules": {
+        // override/add rules settings here, such as:
+        "astro/no-set-html-directive": "error"
+      }
+    }
+  ]
+}
