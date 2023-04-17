@@ -25,6 +25,7 @@
 	const buttonRandom = document.querySelector('#buttonRandom');
 	
 	buttonRandom.addEventListener('click', () => {
+		// Diccionario de palabras en español de 5 letras
 		let list_word = [
 			{ word: 'abaco' },
 			{ word: 'abren' },
@@ -1147,6 +1148,7 @@
 			{ word: 'opera' },
 			{ word: 'arepo' }
 		]
+		
 		let reset_proc = true;
 		let innerHTML = '';
 		let index = Math.floor(Math.random() * list_word.length);
@@ -1187,22 +1189,22 @@
 							second_word = list_word.at(countSecond).word;
 							if(second_word.at(0) === letter_one && second_word.at(4) === letter_two && second_word.at(2) === letter_three) {
 								// console.log('second word => ', second_word);
-								// let countFourth = 0;
-								// while(!ok && countFourth < list_word.length) {
-								// 	fourth_word = list_word.at(countFourth).word;
-								// 	if(fourth_word === second_word.split('').reverse().join('')) {
-								// 		let countFifth = 0;
-								// 		fifth_word = list_word.at(countFifth).word;
-								// 		if(fifth_word === first_word.split('').reverse().join('')) {
+								let countFourth = 0;
+								while(!ok && countFourth < list_word.length) {
+									fourth_word = list_word.at(countFourth).word;
+									if(fourth_word === second_word.split('').reverse().join('')) {
+										// let countFifth = 0;
+										// fifth_word = list_word.at(countFifth).word;
+										// if(fifth_word === first_word.split('').reverse().join('')) {
 											fourth_word = second_word.split('').reverse().join(''); 
 											fifth_word = first_word.split('').reverse().join('');
 											ok = true;
 											reset_proc = false;
-								// 		}
-								// 		else countFifth++;
-								// 	}
-								// 	else countFourth++;
-								// }
+										// }
+										// else countFifth++;
+									}
+									else countFourth++;
+								}
 							}
 							else second_word = '';
 							countSecond++;
